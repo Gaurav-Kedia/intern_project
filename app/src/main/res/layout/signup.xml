@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:padding="25dp"
+        android:id="@+id/sigin_view"
+        android:paddingBottom="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="290dp">
+
+        <EditText
+            android:id="@+id/email_signin"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="Enter your email"/>
+
+        <EditText
+            android:id="@+id/password_signin"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@+id/email_signin"
+            android:hint="Enter your password"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/signin"
+            android:layout_below="@+id/password_signin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/button_oval"
+            android:textSize="23dp"
+            android:text="Login"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_below="@+id/signin"
+            android:id="@+id/go_to_login_view"
+            android:layout_width="match_parent"
+            android:paddingTop="15dp"
+            android:layout_height="50dp"
+            android:text="Already a member? Click here"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+</RelativeLayout>
