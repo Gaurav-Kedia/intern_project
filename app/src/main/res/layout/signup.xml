@@ -26,17 +26,17 @@
             android:inputType="textPassword"/>
 
         <Button
-            android:id="@+id/signin"
+            android:id="@+id/signup"
             android:layout_below="@+id/password_signin"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/button_oval"
             android:textSize="23dp"
-            android:text="Login"
+            android:text="Sign up"
             android:textColor="#ffffff"/>
 
         <TextView
-            android:layout_below="@+id/signin"
+            android:layout_below="@+id/signup"
             android:id="@+id/go_to_login_view"
             android:layout_width="match_parent"
             android:paddingTop="15dp"
