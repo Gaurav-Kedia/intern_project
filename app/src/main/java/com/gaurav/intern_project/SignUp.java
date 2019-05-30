@@ -1,7 +1,6 @@
 package com.gaurav.intern_project;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -27,9 +26,9 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.signup);
         mAuth = FirebaseAuth.getInstance();
 
-        email_UI = (EditText) findViewById(R.id.email_signin);
-        pass_UI = (EditText) findViewById(R.id.password_signin);
-        button_signin = (Button) findViewById(R.id.signup);
+        email_UI = findViewById(R.id.email_signin);
+        pass_UI = findViewById(R.id.password_signin);
+        button_signin = findViewById(R.id.signup);
 
         button_signin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,5 +91,9 @@ public class SignUp extends AppCompatActivity {
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
         return password.length() > 4;
+    }
+
+    public void back_to_login_view(View view) {
+        finish();
     }
 }

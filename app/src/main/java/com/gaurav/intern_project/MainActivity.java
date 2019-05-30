@@ -1,21 +1,15 @@
 package com.gaurav.intern_project;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.sax.StartElementListener;
+import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.ButtonBarLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -30,7 +24,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.ProviderQueryResult;
 
 import java.util.ArrayList;
@@ -54,17 +47,13 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    //mTextMessage.setText(R.string.title_home);
-                    //List_of_workshops.setVisibility(View.GONE);
                     recyclerView.setVisibility(View.GONE);
                     Login_view.setVisibility(View.VISIBLE);
 
                     return true;
                 case R.id.navigation_dashboard:
-                    //mTextMessage.setText(R.string.title_dashboard);
                     Login_view.setVisibility(View.GONE);
                     recyclerView.setVisibility(View.VISIBLE);
-                    //List_of_workshops.setVisibility(View.VISIBLE);
                     show_list();
                     return true;
             }
@@ -78,13 +67,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
 
-        Login_view = (RelativeLayout) findViewById(R.id.login_view);
-        //List_of_workshops = (TextView) findViewById(R.id.workshops);
-        Login = (Button) findViewById(R.id.button_login);
-        Signin = (TextView) findViewById(R.id.sigin_button);
-        email_UI = (EditText) findViewById(R.id.email_login);
-        pass_UI = (EditText) findViewById(R.id.password_login);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_workshop);
+        Login_view = findViewById(R.id.login_view);
+        Login = findViewById(R.id.button_login);
+        Signin = findViewById(R.id.sigin_button);
+        email_UI = findViewById(R.id.email_login);
+        pass_UI = findViewById(R.id.password_login);
+
+        recyclerView = findViewById(R.id.recycler_view_workshop);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
 

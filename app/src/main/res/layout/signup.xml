@@ -41,6 +41,7 @@
             android:layout_width="match_parent"
             android:paddingTop="15dp"
             android:layout_height="50dp"
+            android:onClick="back_to_login_view"
             android:text="Already a member? Click here"
             android:gravity="center"
             />
